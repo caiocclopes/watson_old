@@ -50,7 +50,7 @@ internal class SpeechToTextRecorder {
         }
 
         // work with pcm data in an Autorelease Pool to make sure it is released in a timely manner
-        autoreleasepool { _ in
+        autoreleasepool { 
 
             // execute callback with audio data
             let pcm = Data(bytes: buffer.mAudioData, count: Int(buffer.mAudioDataByteSize))
@@ -125,7 +125,7 @@ internal class SpeechToTextRecorder {
             userInfo: nil,
             repeats: true
         )
-        RunLoop.current.add(powerTimer!, forMode: RunLoopMode.commonModes)
+        RunLoop.current.add(powerTimer!, forMode: RunLoop.Mode.common)
     }
  
     internal func startRecording() throws {

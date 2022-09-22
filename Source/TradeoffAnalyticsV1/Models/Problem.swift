@@ -299,7 +299,7 @@ public enum OptionValue: JSONEncodable, JSONDecodable {
     case date(Foundation.Date)
     
     /// A `String` value for an option.
-    case string(Swift.String)
+    case string(Swift.String.self)
     
     /// Used internally to serialize an `OptionValue` model to JSON.
     public func toJSONObject() -> Any {
