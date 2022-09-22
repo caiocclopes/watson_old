@@ -19,14 +19,13 @@ import PackageDescription
 let package = Package(
   name: "WatsonDeveloperCloud",
     targets: [
+        Target(name: "TextToSpeechV1"),
         Target(name: "RestKit"),
         Target(name: "ConversationV1",               dependencies: [.Target(name: "RestKit")]),
     ],
     dependencies: [
     ],
     exclude: [
-        "Source/SpeechToTextV1",
         "Source/SupportingFiles/Dependencies",
-        "Source/TextToSpeechV1"
     ]
 )
